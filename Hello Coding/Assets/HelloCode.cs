@@ -7,19 +7,22 @@ public class HelloCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float distance = GetDistance(2, 2, 5, 6);
-        Debug.Log("(2, 2)에서 (5,6)까지의 거리 : " + distance);
+        int love = 80;
+
+        if(love>90)
+        {
+            Debug.Log("트루엔딩: 히로인과 결혼했다!");
+        }
+        else if(love>70)
+        {
+            // love가 90보다 작거나 같고. 70보다 큰 경우
+            Debug.Log("굿엔딩: 히로인과 사귀게 되었다!");
+        }
+        else
+        {
+            Debug.Log("배드엔딩: 히로인에게 차였다.");
+        }
     }
 
-    float GetDistance(float x1, float y1, float x2, float y2)
-    {
-        float width = x2 - x1;
-        float height = y2 - y1;
-
-        float distance = width * width + height * height;
-        distance = Mathf.Sqrt(distance);
-
-        return distance;
-
-    }
+  
 }
