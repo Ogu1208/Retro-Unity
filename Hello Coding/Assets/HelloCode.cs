@@ -7,21 +7,22 @@ public class HelloCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int love = 80;
+        bool isDead = false;
+        int hp = 100;
+        
+        while(!isDead)
+        {
+            Debug.Log("í˜„ìž¬ ì²´ë ¥ : " + hp);
+            hp = hp - 33;
 
-        if(love>90)
-        {
-            Debug.Log("Æ®·ç¿£µù: È÷·ÎÀÎ°ú °áÈ¥Çß´Ù!");
+            if(hp <= 0)
+            {
+                isDead = true;
+                Debug.Log("í”Œë ˆì´ì–´ê°€ ì‚¬ë§í–ˆìŠµë‹ˆë‹¤.");
+            }
         }
-        else if(love>70)
-        {
-            // love°¡ 90º¸´Ù ÀÛ°Å³ª °°°í. 70º¸´Ù Å« °æ¿ì
-            Debug.Log("±Â¿£µù: È÷·ÎÀÎ°ú »ç±Í°Ô µÇ¾ú´Ù!");
-        }
-        else
-        {
-            Debug.Log("¹èµå¿£µù: È÷·ÎÀÎ¿¡°Ô Â÷¿´´Ù.");
-        }
+
+
     }
 
   
