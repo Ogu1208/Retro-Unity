@@ -22,4 +22,9 @@ public class Zoo : MonoBehaviour
         jerry.PlaySound();
     }
 
+
+    // 변수는 tom과 jerry 두개지만
+    // 두 변수가 참조값을 통해 가리키는 Animal 오브젝트는 하나뿐
+    // jerry를 통해 Animal 오브젝트를 수정하는 것은 tom을 통해 Animal 오브젝트를 수정하는 것과 같은 의미
+    // -> 참조타입(클래스타입변수) <-> 값타입(내장변수)
 }
